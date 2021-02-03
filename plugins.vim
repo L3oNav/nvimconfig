@@ -25,7 +25,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " tmux
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'

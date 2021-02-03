@@ -45,6 +45,10 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 let g:deoplete#enable_at_startup = 1
 let g:neosnippet#enable_completed_snippet = 1
 
+"Prettier
+let g:prettier#autoformat = 1
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
