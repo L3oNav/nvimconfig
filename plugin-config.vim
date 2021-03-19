@@ -26,6 +26,7 @@ let g:lightline = {
       \}
 
 "  nerdtree
+let NERDTreeIgnore = ['^node_modules', '^.git', ]
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeAutoDeleteBuffer=1
@@ -136,6 +137,10 @@ function! FloatingFZF()
         \ }
   call nvim_open_win(buf, v:true, opts)
 endfunction
+
+" Coc Configuration
+
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
 function! SearchPatternInFile(pattern)
     " Save cursor position.
