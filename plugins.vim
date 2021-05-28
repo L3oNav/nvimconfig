@@ -11,13 +11,11 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " status bar
 Plug 'maximbaz/lightline-ale'
-"Plug 'itchyny/lightline.vim'
-"Plug 'edkolev/promptline.vim'
-
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'gryf/wombat256grf'
+Plug 'ghifarit53/tokyonight-vim'
 " Tree
 Plug 'scrooloose/nerdtree'
 
@@ -36,6 +34,7 @@ Plug 'aurieh/discord.nvim', {'do': ':UpdateRemotePlugins'}
 " autocomplete
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
 " test
 Plug 'tyewang/vimux-jest-test'
 Plug 'janko-m/vim-test'
@@ -51,9 +50,9 @@ Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
+
 " git
 Plug 'tpope/vim-fugitive'
-
 Plug 'tpope/vim-repeat'
 
 call plug#end()
