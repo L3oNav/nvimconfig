@@ -1,5 +1,10 @@
 call plug#begin('~/.vim/plugged')
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/completion-treesitter'
 " syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'HerringtonDarkholme/yats.vim'
@@ -24,6 +29,9 @@ Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 " tmux
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -56,3 +64,4 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
 call plug#end()
+
