@@ -19,10 +19,10 @@ so ~/.vim/plugin-config.vim
 "let g:edge_transparent_background=1
 "let g:edge_sign_column_background='none'
 let g:tokyonight_enable_italic=1
-let g:tokyonight_transparent_background=1
 let g:tokyonight_cursor='green'
 let g:tokyonight_current_word='italic'
 let g:airline_theme='tokyonight'
+let g:tokyonight_style='night'
 colorscheme tokyonight
 highlight Normal ctermbg=NONE
 set laststatus=2
