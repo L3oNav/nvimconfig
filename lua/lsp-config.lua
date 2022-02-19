@@ -205,8 +205,8 @@ require'nvim-tree'.setup {
     mappings = {
       custom_only = false,
       list = {
-	{key="v",  action="vsplit"},
-	{key="V",  action="split"}
+	{key="s",  action="vsplit"},
+	{key="S",  action="split"}
       }
     },
     number = false,
