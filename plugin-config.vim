@@ -1,10 +1,34 @@
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
+
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   }
+    \ }
 " Lightlane
 let g:lightline = {
       \ 'active': {
       \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
-      \   'right': [['cocstatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+      \   'right': [['filetype', 'percent', 'lineinfo'], ['gitbranch']]
       \ },
       \ 'inactive': {
       \   'left': [['inactive'], ['relativepath']],
@@ -16,9 +40,8 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
-      \   'cocstatus': 'coc#status'
       \ },
-      \ 'colorscheme': 'wombat256grf',
+      \ 'colorscheme': 'tokyonight',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''
@@ -26,15 +49,16 @@ let g:lightline = {
       \}
 
 "  nerdtree
-let NERDTreeIgnore = ['^node_modules', '^.git', ]
-let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeAutoDeleteBuffer=1
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
-let NERDTreeShowLineNumbers=1
-let NERDTreeMapOpenInTab='\t'
+"let NERDTreeIgnore = ['^node_modules', '^.git' ]
+"let NERDTreeShowHidden=1
+"let NERDTreeQuitOnOpen=1
+"let NERDTreeAutoDeleteBuffer=1
+"let NERDTreeMinimalUI=1
+"let NERDTreeDirArrows=1
+"let NERDTreeShowLineNumbers=1
+"let NERDTreeMapOpenInTab='\t'
 let g:javascript_plugin_flow = 1
+
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsSnippetDirectories=[$HOME.'/config/.vim/UltiSnips']
@@ -50,8 +74,6 @@ let g:neosnippet#enable_completed_snippet = 1
 let g:prettier#autoformat = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 command! -bang -nargs=? -complete=dir GFiles
   \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
@@ -85,39 +107,11 @@ set signcolumn=yes
 set diffopt+=vertical
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-"Remap keys for easymotio
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
-autocmd BufEnter *.js :silent let myIndex = SearchPatternInFile("@flow") | call SwitchFlowOrTsLsps(myIndex)
-autocmd BufEnter *.jsx :silent let myIndex = SearchPatternInFile("@flow") | call SwitchFlowOrTsLsps(myIndex)
-
-function! SwitchFlowOrTsLsps(flowIndex)
-  silent let stats = CocAction("extensionStats")
-  silent let tsserver = get(filter(copy(stats), function('FindTsServer')), 0)
-  if(a:flowIndex == 0)
-    if(tsserver.state == 'disabled')
-      call CocActionAsync("toggleExtension", "coc-tsserver")
-    endif
-  else
-    if(tsserver.state == 'activated')
-      call CocActionAsync("toggleExtension", "coc-tsserver")
-    endif
-  endif
-endfunction
-
-function! FindTsServer(idx, value) 
-  return a:value.id == 'coc-tsserver'
-endfunction
 
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
@@ -139,9 +133,6 @@ function! FloatingFZF()
 endfunction
 
 " Coc Configuration
-
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-prettier', 'coc-python']
-
 function! SearchPatternInFile(pattern)
     " Save cursor position.
     let save_cursor = getcurpos()
@@ -170,8 +161,5 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
-
-let g:airline_theme = 'simple'
-
+let g:airline_theme=''
 set guifont=Fira\ Code:h12

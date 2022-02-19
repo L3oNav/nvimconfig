@@ -6,7 +6,7 @@ syntax on
 set showcmd
 set ruler
 set cursorline
-set encoding=utf-8
+set encoding=utf8
 set showmatch
 set sw=2
 set relativenumber
@@ -14,19 +14,14 @@ set termguicolors
 so ~/.vim/plugins.vim
 so ~/.vim/maps.vim
 so ~/.vim/plugin-config.vim
-"colorscheme edge
-"let g:edge_style = 'neon'
-"let g:edge_transparent_background=1
-"let g:edge_sign_column_background='none'
-let g:tokyonight_enable_italic=1
-let g:tokyonight_cursor='green'
-let g:tokyonight_current_word='italic'
-let g:airline_theme='tokyonight'
-let g:tokyonight_style='night'
+let g:tokyonight_style="night"
+let g:tokyonight_transparent=1
+let g:tokyonight_current_word="italic"
+let g:tokyonight_italic_functions=1
+let g:tokyonight_transparent_sidebar=1
 colorscheme tokyonight
 highlight Normal ctermbg=NONE
-set laststatus=2
-set noshowmode
+let g:python3_host_prog = '/usr/bin/python3'
 "" Javascript
 "autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
 "autocmd bufnewfile,bufread *.ts set filetype=typescript.tsx
@@ -38,11 +33,10 @@ set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
-
+set laststatus=2
 " =========================================
 " |																				|
 " |----------lsp-configuration------------|
 " |																				|
 " =========================================
-
-lua require('settings')
+lua require('lsp-config')
