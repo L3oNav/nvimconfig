@@ -1,0 +1,10 @@
+{
+	"dependencies": {
+		"bash-language-server": "^1.17.0",
+		"global": "^4.4.0",
+		"pyright": "^1.1.144",
+		"typescript": "^4.3.2",
+		"typescript-language-server": "^0.5.1",
+		"vim-language-server": "^2.2.3"
+	}
+}

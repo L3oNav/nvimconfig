@@ -1,40 +1,49 @@
 call plug#begin('~/.vim/plugged')
-
-" syntax
-Plug 'sheerun/vim-polyglot'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'flowtype/vim-flow'
-Plug 'rudrab/vimf90'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'haorenW1025/completion-nvim'
+Plug 'nvim-treesitter/completion-treesitter'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 " status bar
-Plug 'maximbaz/lightline-ale'
 " Themes
 Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'gryf/wombat256grf'
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Tree
-Plug 'scrooloose/nerdtree'
-
+"Plug 'scrooloose/nerdtree'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
+" Sintax
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " typing
+Plug 'jparise/vim-graphql'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-commentary'
 " tmux
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 
-" External utils
-Plug 'aurieh/discord.nvim', {'do': ':UpdateRemotePlugins'}
 
 " autocomplete
 Plug 'sirver/ultisnips'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-
 " test
 Plug 'tyewang/vimux-jest-test'
 Plug 'janko-m/vim-test'
@@ -48,11 +57,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-airline/vim-airline'
-
+Plug 'itchyny/lightline.vim'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
 call plug#end()
+

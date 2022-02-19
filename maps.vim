@@ -16,24 +16,31 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 
 " shorter commands
-cnoreabbrev tree NERDTreeToggle
 cnoreabbrev blame Gblame
-cnoreabbrev find NERDTreeFind
 cnoreabbrev diff Gdiff
 
 " plugs
-map <Leader>Z :NERDTreeFind<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
-
+nnoremap <Leader>Z :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+"LSP maps
+nnoremap <silent> cd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> cD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> cr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> ci <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 "CoC
-nmap <silent> cd <Plug>(coc-definition)
-nmap <silent> ct <Plug>(coc-type-definition)
-nmap <silent> ci <Plug>(coc-implementation)
-nmap <silent> cr <Plug>(coc-references)
-
+"map <silent> cd <Plug>(coc-definition)
+"nmap <silent> ct <Plug>(coc-type-definition)
+"nmap <silent> ci <Plug>(coc-implementation)
+"nmap <silent> cr <Plug>(coc-references)
 " diagnostics
-nnoremap <Leader>dia  :<C-u>CocList diagnostics<cr>
+"nnoremap <Leader>dia  :<C-u>CocList diagnostics<cr>
 nnoremap <leader>kp :let @*=expand("%")<CR>
 
 " tabs navigation
