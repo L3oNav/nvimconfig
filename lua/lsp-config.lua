@@ -204,7 +204,10 @@ require'nvim-tree'.setup {
     auto_resize = false,
     mappings = {
       custom_only = false,
-      list = {}
+      list = {
+	{key="v",  action="vsplit"}
+	{key="V",  action="split"}
+      }
     },
     number = false,
     relativenumber = false,
