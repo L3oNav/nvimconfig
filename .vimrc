@@ -14,7 +14,7 @@ set termguicolors
 so ~/.vim/plugins.vim
 so ~/.vim/maps.vim
 so ~/.vim/plugin-config.vim
-let g:tokyonight_style="night"
+let g:tokyonight_style="storm"
 let g:tokyonight_transparent=1
 let g:tokyonight_current_word="italic"
 let g:tokyonight_italic_functions=1
