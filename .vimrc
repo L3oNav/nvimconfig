@@ -20,7 +20,7 @@ let g:tokyonight_current_word="italic"
 let g:tokyonight_italic_functions=1
 let g:tokyonight_transparent_sidebar=1
 colorscheme tokyonight
-highlight Normal ctermbg=NONE
+highlight Comment guifg=#03c6fc
 let g:python3_host_prog = '/usr/bin/python3'
 "" Javascript
 "autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
