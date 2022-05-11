@@ -23,9 +23,10 @@ Plug 'morhetz/gruvbox'
 Plug 'gryf/wombat256grf'
 Plug 'ryanoasis/vim-devicons'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 " Tree
 "Plug 'scrooloose/nerdtree'
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 " Sintax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -57,7 +58,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
-Plug 'itchyny/lightline.vim'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'

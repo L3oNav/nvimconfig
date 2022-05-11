@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/l3onav'
+let g:netrw_dirhist_3='/Users/l3onav/projects/plaeto-backend'
 let g:netrw_dirhist_2='/home/l3onav/.vim'
 let g:netrw_dirhist_1='/home/l3onav/Projects/Python/gathering_backend'

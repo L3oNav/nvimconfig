@@ -7,6 +7,12 @@ local buf_map = function(bufnr, mode, lhs, rhs, opts)
     })
 end
 
+require('lualine').setup {
+  options = {
+    theme='tokyonight'
+  }
+}
+
 local on_attach = function(client, bufnr)
     vim.cmd("command! LspDef lua vim.lsp.buf.definition()")
     vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
