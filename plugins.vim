@@ -19,17 +19,20 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 " status bar
 " Themes
+Plug 'xiyaowong/nvim-transparent'
 Plug 'morhetz/gruvbox'
 Plug 'gryf/wombat256grf'
 Plug 'ryanoasis/vim-devicons'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 " Tree
 "Plug 'scrooloose/nerdtree'
 Plug 'kyazdani42/nvim-tree.lua'
 " Sintax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " typing
 Plug 'jparise/vim-graphql'
 Plug 'alvan/vim-closetag'

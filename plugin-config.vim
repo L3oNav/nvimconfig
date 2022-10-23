@@ -1,29 +1,7 @@
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
 
-let g:nvim_tree_icons = {
-    \ 'default': '',
-    \ 'symlink': '',
-    \ 'git': {
-    \   'unstaged': "✗",
-    \   'staged': "✓",
-    \   'unmerged': "",
-    \   'renamed': "➜",
-    \   'untracked': "★",
-    \   'deleted': "",
-    \   'ignored': "◌"
-    \   },
-    \ 'folder': {
-    \   'arrow_open': "",
-    \   'arrow_closed': "",
-    \   'default': "",
-    \   'open': "",
-    \   'empty': "",
-    \   'empty_open': "",
-    \   'symlink': "",
-    \   'symlink_open': "",
-    \   }
-    \ }
+
 " Lightlane
 "let g:lightline = {
       "\ 'active': {
@@ -62,9 +40,6 @@ let g:javascript_plugin_flow = 1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsSnippetDirectories=[$HOME.'/config/.vim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -156,10 +131,4 @@ function! SearchPatternInFile(pattern)
 endfunction
 
 "Airline configuration
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-" Airline configuration tabline extension 
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme=''
 set guifont=Fira\ Code:h12

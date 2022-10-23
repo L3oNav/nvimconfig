@@ -1,10 +1,13 @@
 {
 	"dependencies": {
-		"bash-language-server": "^1.17.0",
+		"bash-language-server": "^3.1.0",
 		"global": "^4.4.0",
 		"pyright": "^1.1.144",
+		"tree-sitter-cli": "^0.20.7",
+		"tree-sitter-phpdoc": "^0.1.0",
 		"typescript": "^4.3.2",
 		"typescript-language-server": "^0.5.1",
-		"vim-language-server": "^2.2.3"
+		"vim-language-server": "^2.2.3",
+		"yarn": "^1.22.19"
 	}
 }
